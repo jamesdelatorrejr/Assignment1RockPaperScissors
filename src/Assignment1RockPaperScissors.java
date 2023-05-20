@@ -15,23 +15,39 @@ public class Assignment1RockPaperScissors {
                 System.out.println("Player 1 move (R/P/S): ");
                 if (in.hasNextLine()) {
                     playerOne = in.nextLine();
-                    done = true;
-                } else {
-                    error = in.nextLine();
-                    System.out.println("Error in your input " + error + " Provide a legal move.");
-                }
+                    if (playerOne.equalsIgnoreCase("R" ))
+                        done = true;
+                    else if (playerOne.equalsIgnoreCase("S" )) {
+                        done = true;
+                    }
+                    else if (playerOne.equalsIgnoreCase("P" )) {
+                        done = true;
+                    }
+                    else
+                    {
+                        System.out.println("Error in player 1 input.");
+                    }
+                } else {}
             } while (done == false);
-
 
             do {
                 System.out.println("Player 2 move (R/P/S): ");
                 if (in.hasNextLine()) {
                     playerTwo = in.nextLine();
-                    done = true;
-                } else {
-                    error = in.nextLine();
-                    System.out.println("Error in your input " + error + " Provide a legal move.");
-                }
+                    if (playerTwo.equalsIgnoreCase("R" ))
+                        done = true;
+                    else if (playerTwo.equalsIgnoreCase("S" )) {
+                        done = true;
+                    }
+                    else if (playerTwo.equalsIgnoreCase("P" )) {
+                        done = true;
+                    }
+                    else
+                    {
+                        System.out.println("Error in player 2 input.");
+                        done = false;
+                    }
+                } else {}
             } while (done == false);
 
             if (playerOne.equalsIgnoreCase("R")) {
